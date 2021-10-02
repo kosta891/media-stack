@@ -20,10 +20,6 @@ const Articles = () => {
     );
   }
 
-  if (!isLoading && news.length === 0) {
-    return <div className='page-error'>No data!</div>;
-  }
-
   return (
     <InfiniteScroll
       dataLength={news.length}

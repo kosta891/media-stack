@@ -59,13 +59,13 @@ const AppProvider = (props) => {
         return [...oldData, ...modifyData];
       });
 
-      setOffset((prevOffset) => prevOffset + pagination.limit + 1);
+      setOffset((prevOffset) => prevOffset + pagination.limit - 1);
     } catch (error) {}
   };
 
   useEffect(() => {
     fetchNews(API_ENDPOINT);
-  }, [category, sorting, search]);
+  }, [API_ENDPOINT]);
 
   return (
     <AppContext.Provider
@@ -80,7 +80,6 @@ const AppProvider = (props) => {
         setSorting,
         setSearch,
         setQuery,
-
         fetchMorePages,
       }}
     >
