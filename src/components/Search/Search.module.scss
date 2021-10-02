@@ -1,0 +1,52 @@
+@import '../../global.scss';
+
+// search and buttons
+.search-container {
+  margin: 0 auto 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+
+  // buttons
+  .btn-flex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    .buttons {
+      margin: 0 1rem;
+    }
+  }
+
+  // search
+  .search-input {
+    width: 400px;
+
+    input {
+      padding-left: 2rem !important;
+      border: 2px solid $font-color;
+      width: 100%;
+      background: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: $radius;
+      letter-spacing: 0.1rem;
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+  }
+}
+
+// search icon
+.icon {
+  font-size: 1.1rem;
+  z-index: 5;
+  position: absolute;
+  margin: 2.2rem 0.5rem;
+}
