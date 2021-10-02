@@ -39,7 +39,7 @@ const AppProvider = (props) => {
       } else {
         const modifyData = data.map((article) => ({ ...article, id: uuid() }));
         setNews(modifyData);
-        setOffset(pagination.limit + 1);
+        setOffset(pagination.limit);
         setError('');
       }
     } catch (error) {
@@ -59,7 +59,7 @@ const AppProvider = (props) => {
         return [...oldData, ...modifyData];
       });
 
-      setOffset((prevOffset) => prevOffset + pagination.limit - 1);
+      setOffset((prevOffset) => prevOffset + pagination.limit);
     } catch (error) {}
   };
 

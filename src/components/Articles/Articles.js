@@ -11,7 +11,7 @@ const Articles = () => {
   if (isLoading) {
     return <LoadingSpinner />;
   }
-  console.log(news);
+
   if (error) {
     return (
       <div className='page-error'>
